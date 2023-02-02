@@ -118,37 +118,55 @@ Data types:
             - Value that is unique and cannot be changed.
          
 
-    Dynamic typing:
-        - It doesn't require to manually define variable data type at the time of declaring it.
-        - Data type is automatically defined at the runtime i.e., the interpreter assigns 
-          variables a type at runtime based on the variable's value.
+Dynamic typing:
+--------------
+    - It doesn't require to manually define variable data type at the time of declaring it.
+    - Data type is automatically defined at the runtime i.e., the interpreter assigns 
+      variables a type at runtime based on the variable's value.
 
 
-    NOTE: Value has the type not the variable.
+NOTE: Value has the type not the variable.
 
 
-    'typeof' Operator:
-        - It returns the type of the operand as String.
-        - You may also come across another syntax: typeof(x). It’s the same as typeof x.
-          
-          For Example:
-            typeof Math // "object" --> Math is a built-in object that provides mathematical operations.
-            typeof null // "object"
-            typeof alert // "function" --> alert is a function. 
+'typeof' Operator:
+-----------------
+  - It returns the type of the operand as String.
+  - You may also come across another syntax: typeof(x). It’s the same as typeof x.
+    
+    For Example:
+      typeof Math // "object" --> Math is a built-in object that provides mathematical operations.
+      typeof null // "object"
+      typeof alert // "function" --> alert is a function. 
 
 
-    'let', 'var', and 'const':
-        1) let:
-            - used when we have to change value of the variable later in the program.
-            - mutate or reassigning
-            - declaring empty variable
+'let', 'var', and 'const':
+-------------------------
+  1) let:
+      - used when we have to change value of the variable later in the program.
+      - mutate or reassigning
+      - declaring empty variable
+        For Example:
+          let javascriptIsFun = true;
+          let numOne = 1;
 
-        2) const:
-            - value for the const variable cannot be changed.
-            - immutable variable - value cannot be mutated.
-            - cannot declare empty variable, it must be intialized.
+  2) const:
+      - value for the const variable cannot be changed.
+      - immutable variable - value cannot be mutated.
+      - cannot declare empty variable, it must be intialized.
+        For Example:
+          const birthYear = 2001;                
+  
+  3) var:
+      - this should be completely avoided (avoid using it).
+      - old way of defining variable (prior to ES6).
+      - works same as 'let' (but they are still different, we will talk about it later).
+        For Example:
+          var job = 'programmer';
 
-          
+  NOTE: We can also use a variable withour declaring it (But it is not a good idea).
+        For Example:
+              lastName = 'Ishu Raj';
+              console.log(lastName);
 
 */
 
@@ -185,3 +203,7 @@ console.log("10: " + (9007199254740991 + 10)); // 9007199254741000 --> EVEN
 let bigInt = 1234567890123456789012345678901234567890n;
 console.log(bigInt);
 
+
+// Using variable without declaring it
+lastName = 'Ishu Raj';
+console.log(lastName);
